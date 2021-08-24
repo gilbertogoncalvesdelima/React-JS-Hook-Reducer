@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# React useReducer hook 
+useReducer é um gancho interno do React.
+Neste artigo, você aprenderá o que é o gancho useReducer, para que ele é usado,
+quando escolher o gancho useReducer e quando escolher o gancho useState. 
+Para torná-lo mais fácil de entender do que frases longas e chatas, como usar o gancho useReducer em ação.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Visão geral
+O gancho useReducer permite que você gerencie o estado em um componente funcional 
+e também fornece uma função que atualiza o estado e renderiza novamente o componente. 
+É muito semelhante ao gancho useState, mas tem algumas vantagens em certos casos que
+discutiremos posteriormente na seção Escolhendo entre useReducer e useState .
+const [state, dispatch] = useReducer(reducer, initialState);
 
-## Available Scripts
+# Onde:
+state : o estado retornado por useReducer.
+despacho : uma função usada para atualizar o estado.
+redutor : uma função que leva 2 argumentos: o primeiro é o estado anterior e o segundo 
+é uma ação que é um objeto que contém informações usadas para atualizar o estado 
+(Esta explicação pode ser um pouco confusa. Não se preocupe, os exemplos fornecido 
+neste artigo irá mostrar que não é tão complicado).
+initialState : o estado no início.
 
-In the project directory, you can run:
+# Escolha entre useReducer e useState
+Em palavras simples:
 
-### `yarn start`
+useReducer é melhor quando você tem estados complexos e conectados . Você pode escrever alguma lógica que basicamente é executada sempre que você deseja alterar o estado para fazer atualizações mais complexas do que apenas definir um novo valor.
+useState é melhor quando seus estados NÃO são complexos e interdependentes . Nesses casos, usar useState torna seu código muito mais curto e fácil de entender do que usar useReducer.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Descrição do Projeto
+Um exemplo simples: useReducer + formulário de entrada
+Este aplicativo de exemplo contém um formulário com uma entrada de texto e um botão. A entrada de texto permite que o usuário insira seu nome. O botão está desabilitado por padrão e só se torna habilitado quando o nome inserido é válido (presumimos que um nome é válido quando seu comprimento é maior ou igual a 3). Quando o botão é clicado, o que está na entrada de texto ficará claro.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Para verificar o projetinho click no link
+npm run build
+https://react-use-reducer-hook.netlify.app/# react_use_reducer_hook
