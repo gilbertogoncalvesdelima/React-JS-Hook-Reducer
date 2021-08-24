@@ -32,4 +32,4 @@ Este aplicativo de exemplo contém um formulário com uma entrada de texto e um 
 
 # Para verificar o projetinho click no link
 npm run build
-https://react-use-reducer-hook.netlify.app/# react_use_reducer_hook
+https://react-use-reducer-hook.netlify.app/#
